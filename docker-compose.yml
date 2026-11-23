@@ -1,0 +1,14 @@
+services:
+  backend:
+    build: .
+    env_file:
+      - .env
+    ports:
+      - "8000:8000"
+    volumes:
+      - static_data:/app/back_static
+      - media_data:/app/back_media
+
+volumes:
+  static_data:
+  media_data:
